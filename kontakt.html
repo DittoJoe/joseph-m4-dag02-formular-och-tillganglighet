@@ -19,16 +19,57 @@
 
   <main>
     <h2>Boka bord</h2>
-    <!-- TODO: Skriv ingressen från innehall.md -->
-
+    <p>Fyll i formuläret så bekräftar vi din bokning inom ett dygn. Fält markerade med * är obligatoriska.</p>
     <form action="#" method="post">
-      <!-- TODO 1: fält för namn, e-post, telefon, datum (label + input med for/id) -->
-      <!-- TODO 2: rullista för antal personer, textarea för önskemål -->
-      <!-- TODO 3: fieldset + legend för kostönskemål och bekräftelsesätt -->
-      <!-- TODO 4: samtyckeskryssruta (required) och skickaknapp -->
+       <div class="falt">
+        <label for="namn">Namn *</label>
+        <input type="text" id="namn" required>
+       </div>
+       <div class="falt">
+        <label for="epost">E-postadress *</label>
+        <input type="email" id="epost" required>
+       </div>
+       <div class="falt">
+        <label for="telefon">Telefon (valfritt)</label>
+        <input type="tel" id="telefon">
+       </div>
+       <div class="falt">
+        <label for="datum">Datum *</label>
+        <input type="date" id="datum" required>
+       </div>
+       <div class="falt">
+        <label for="antal">Antal personer *</label>
+          <select name="antal" id="antal" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 eller fler</option>
+          </select>
+       </div>
+       <div class="falt">
+        <label for="kost">Önskemål</label>
+        <textarea name="onskemal" id="onskemal"></textarea>
+       </div>
+       <fieldset>
+         <legend>Kostönskemål:</legend>
+         <label for="vegetarisk">Vegetarisk</label>
+         <input type="checkbox" id="vegetarisk">
+         <label for="vegansk">Vegansk</label>
+         <input type="checkbox" id="vegansk">
+         <label for="glutenfri">Glutenfri</label>
+         <input type="checkbox" id="glutenfri">
+       </fieldset>
+       <fieldset>
+         <legend>Hur vill du få bekräftelsen? *</legend>
+         <label for="epost">E-post</label>
+         <input type="radio" name="radio" required>
+         <label for="sms">SMS</label>
+         <input type="radio" name="radio">
+       </fieldset>
+      <button type="submit">Submit</button>
     </form>
   </main>
-
   <footer>
     <p>&copy; 2026 Kafé Kardemumma</p>
     <address>
